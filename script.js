@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiKey = '98829e149f74c654d76d31f18e12cdaf';
+    const apiKey = '1d4a267d127c0e79263fd2d904d08da5';
     const locationStatus = document.getElementById('location-status');
     const locationDisplay = document.getElementById('location-display');
     const weatherStatus = document.getElementById('weather-status');
