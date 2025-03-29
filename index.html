@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#007bff"/>
+    <title>RC Flying Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192x192.png"> <!-- Basic iOS support -->
+</head>
+<body>
+    <header>
+        <h1>RC Flying Weather</h1>
+    </header>
+
+    <main>
+        <section id="location-section">
+            <h2>Location</h2>
+            <p id="location-status">Detecting location...</p>
+            <p id="location-display"></p>
+        </section>
+
+        <section id="status-section">
+             <p id="weather-status"></p>
+             <div id="go-nogo-indicator">STATUS</div> <!-- Added Go/No-Go indicator -->
+        </section>
+
+        <section id="current-weather">
+            <h2>Current Conditions</h2>
+            <div id="current-conditions-display">
+                <!-- Data will be injected here by JS -->
+                 Loading...
+            </div>
+             <button id="refresh-button">Refresh</button>
+        </section>
+
+         <section id="thresholds">
+             <h2>Conditions Thresholds</h2>
+             <label for="wind-threshold">Max Wind (mph):</label>
+             <input type="number" id="wind-threshold" value="10">
+             <label for="gust-threshold">Max Gust (mph):</label>
+             <input type="number" id="gust-threshold" value="15">
+             <button id="save-settings">Save</button>
+         </section>
+
+        <section id="hourly-forecast">
+            <h2>Hourly Forecast (Next 24h)</h2>
+            <div id="hourly-forecast-display" class="hourly-container">
+                <!-- Data will be injected here by JS -->
+                Loading...
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Weather data powered by OpenWeatherMap.</p>
+        <p>Last Updated: <span id="last-updated">Never</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

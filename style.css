@@ -1,0 +1,150 @@
+:root {
+    --primary-color: #007bff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-color: #212529;
+    --border-color: #dee2e6;
+    --go-color: #28a745;
+    --caution-color: #ffc107;
+    --nogo-color: #dc3545;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+    max-width: 800px; /* Limit width on larger screens */
+    margin: 0 auto; /* Center content */
+}
+
+section {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#location-status, #weather-status {
+    font-style: italic;
+    color: #6c757d;
+}
+
+#current-conditions-display div,
+.hourly-item div {
+    margin-bottom: 0.5rem; /* Spacing within current/hourly items */
+}
+
+.hourly-container {
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding-bottom: 1rem; /* Space for scrollbar */
+    gap: 1rem; /* Space between items */
+}
+
+.hourly-item {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 0.8rem;
+    min-width: 150px; /* Ensure items have a minimum width */
+    background-color: var(--light-gray);
+    text-align: center;
+    flex-shrink: 0; /* Prevent items from shrinking */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.hourly-item strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.hourly-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.3rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#refresh-button {
+    margin-top: 1rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Go/No-Go Indicator Styling */
+#go-nogo-indicator {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1em;
+}
+
+.status-go { background-color: var(--go-color); }
+.status-caution { background-color: var(--caution-color); color: var(--dark-gray); }
+.status-nogo { background-color: var(--nogo-color); }
+
+/* Thresholds Section */
+#thresholds label {
+    margin-right: 0.5rem;
+}
+#thresholds input[type="number"] {
+    width: 60px;
+    padding: 0.3rem;
+    margin-right: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+#save-settings {
+    background-color: var(--go-color);
+}
+#save-settings:hover {
+    background-color: #218838;
+}
